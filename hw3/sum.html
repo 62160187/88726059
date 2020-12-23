@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Hanalei+Fill&family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <style type='text/css'>
+        body {cursor: url('http://fix.gs/pic/cursor/i/point60.cur'),auto;}
+        a {cursor: url('http://fix.gs/pic/cursor/i/point60.cur'),auto; }
+       html {
+               background: url(https://images.unsplash.com/photo-1468657988500-aca2be09f4c6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)
+       no-repeat center center fixed;
+               -webkit-background-size: cover;
+               -moz-background-size: cover;
+               -o-background-size: cover;
+               background-size: cover;
+               font-family: 'Luckiest Guy', cursive;
+               font-size: 25px;
+               color: #9b86ca
+       }
+       </style>
+<body>
+
+<br><br>
+<br><br>
+<p>โปรแกรม บวกสะสม - sum.html</p>
+    
+<script>
+    function summary(){
+          sum = document.getElementById('sum').innerHTML=""
+          number1 = document.getElementById('x');
+          number2 = document.getElementById('y');
+          sum = document.getElementById('sum');
+          var c = 0;
+          
+    for ( let i = parseInt(number1.value);i<=parseInt(number2.value);i++) {
+        c = c+i;
+
+        sum.innerHTML +=i
+        if(i<parseInt(number2.value)){
+            
+            sum.innerHTML += "+"
+        }
+        if(i==parseInt(number2.value)){
+            sum.innerHTML += "="
+            sum.innerHTML += c
+        }
+    }
+}
+</script>
+<body align = "center">
+            <input type="text" placeholder="ใส่ตัวเลข" id="x"> -  
+            <input type="text" placeholder="ใส่ตัวเลข" id="y">
+            <button onclick="summary()">คำนวณ</button>
+            <div id="sum"></div>
+            
+</body>
+</html>
